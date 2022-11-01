@@ -10,7 +10,7 @@ public class SurpriseViewModel extends ViewModel {
 
     public SurpriseViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is dashboard fragment");
+        mText.setValue("This is the surprise me fragment");
     }
 
     public LiveData<String> getText() {

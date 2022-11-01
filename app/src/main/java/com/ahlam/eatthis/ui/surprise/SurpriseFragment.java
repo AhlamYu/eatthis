@@ -24,8 +24,8 @@ public class SurpriseFragment extends Fragment {
         binding = FragmentSurpriseBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textDashboard;
-        surpriseViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+//        final TextView textView = binding.textDashboard;
+//        surpriseViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
