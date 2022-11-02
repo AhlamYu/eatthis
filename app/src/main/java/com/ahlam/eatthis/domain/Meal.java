@@ -11,6 +11,7 @@ public class Meal {
 
     private String idMeal;
     private String strMeal;
+    private String strMealThumb;
 
     @Override
     public String toString() {
