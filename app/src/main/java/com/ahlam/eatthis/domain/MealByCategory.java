@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Meal {
+public class MealByCategory {
 
     private String idMeal;
     private String strMeal;
@@ -17,4 +17,6 @@ public class Meal {
     public String toString() {
         return strMeal;
     }
+
+
 }

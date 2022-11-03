@@ -16,6 +16,13 @@
         android:theme="@style/Theme.EatThis"
         tools:targetApi="31">
         <activity
+            android:name=".MealDetailActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".RecipeCategoryListActivity"
             android:exported="false">
             <meta-data

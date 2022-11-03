@@ -73,8 +73,6 @@ public class HomeFragment extends Fragment implements AdapterView.OnItemClickLis
     }
 
 
-
-
     @Override
     public void onDestroyView() {
         super.onDestroyView();

@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class MealApiList {
+public class MealByCategoryApiList {
 
-    private List<Meal> meals;
+    private List<MealByCategory> meals;
 }

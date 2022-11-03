@@ -1,7 +1,7 @@
 package com.ahlam.eatthis.api;
 
 import com.ahlam.eatthis.domain.CategoryApiList;
-import com.ahlam.eatthis.domain.MealApiList;
+import com.ahlam.eatthis.domain.MealByCategoryApiList;
 import com.ahlam.eatthis.domain.RandomApiList;
 
 import retrofit2.Call;
@@ -12,7 +12,10 @@ import retrofit2.http.Query;
 public interface TheMealDbApiInterface {
 
     @GET("search.php")
-    Call<MealApiList> getMealsByName(@Query("s") String name);
+    Call<MealByCategoryApiList> getMealsByName(@Query("s") String name);
+
+    @GET("filter.php")
+    Call<MealByCategoryApiList> getMealsbyCategory(@Query("c") String categoryByMeal);
 
     @GET("categories.php")
     Call<CategoryApiList> getAllCategories();
