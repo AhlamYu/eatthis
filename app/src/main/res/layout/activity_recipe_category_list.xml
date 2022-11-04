@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RecipeCategoryListActivity">
+    tools:context=".list_meals_based_on_category.RecipeCategoryListActivity">
 
     <ListView
         android:id="@+id/recipe_list_category"

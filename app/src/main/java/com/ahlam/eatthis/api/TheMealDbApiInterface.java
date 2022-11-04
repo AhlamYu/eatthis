@@ -3,6 +3,7 @@ package com.ahlam.eatthis.api;
 import com.ahlam.eatthis.domain.CategoryApiList;
 import com.ahlam.eatthis.domain.MealByCategoryApiList;
 import com.ahlam.eatthis.domain.RandomApiList;
+import com.ahlam.eatthis.domain.ReceiptAPiList;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -22,4 +23,7 @@ public interface TheMealDbApiInterface {
 
     @GET("random.php")
     Call<RandomApiList> getRandomMeal();
+
+    @GET("lookup.php")
+    Call<ReceiptAPiList> getRecipe(@Query("i") String mealID);
 }

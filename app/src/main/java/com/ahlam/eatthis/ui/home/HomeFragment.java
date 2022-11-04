@@ -1,6 +1,5 @@
 package com.ahlam.eatthis.ui.home;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,29 +8,16 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.ahlam.eatthis.MainActivity;
-import com.ahlam.eatthis.R;
-import com.ahlam.eatthis.RecipeCategoryListActivity;
-import com.ahlam.eatthis.api.TheMealDbApi;
-import com.ahlam.eatthis.api.TheMealDbApiInterface;
+import com.ahlam.eatthis.list_meals_based_on_category.RecipeCategoryListActivity;
 import com.ahlam.eatthis.databinding.FragmentHomeBinding;
 import com.ahlam.eatthis.domain.Category;
-import com.ahlam.eatthis.domain.CategoryApiList;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 
 public class HomeFragment extends Fragment implements AdapterView.OnItemClickListener {

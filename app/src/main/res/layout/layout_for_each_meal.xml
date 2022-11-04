@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:translationY="-18dp"
-        android:text="Meal Name"
+        android:text="@string/meal_name"
         android:textSize="20sp"
         android:textStyle="bold" />
 
@@ -28,8 +28,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="69dp"
-        android:layout_toRightOf="@+id/ivMealPhoto"
-        android:text="Meal Category"
+        android:layout_toEndOf="@+id/ivMealPhoto"
+        android:text="@string/meal_category"
         android:textSize="15sp"
         android:textStyle="italic"
         android:translationX="-102dp"

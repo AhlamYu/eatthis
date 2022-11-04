@@ -4,4 +4,10 @@
     <string name="title_surprise">Surprise Me</string>
     <string name="title_favourite">Favourite</string>
     <string name="know_more">Know More</string>
+    <string name="detail_reciopt_txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque lobortis lacus a finibus molestie. Praesent in feugiat lacus. Sed non diam ut ligula varius condimentum non eu ligula. Sed volutpat gravida ligula ac interdum. Nunc a ipsum gravida, tempor mauris eu, tincidunt enim. Duis at varius turpis. Duis facilisis congue euismod. Mauris aliquet blandit rhoncus. Vivamus vulputate justo vel erat pellentesque, sit amet ultricies purus mattis. Donec lobortis imperdiet lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="meal_category">Meal Category</string>
+    <string name="meal_name">Meal Name</string>
+    <string name="category">Category:</string>
+    <string name="area">Area</string>
+    <string name="ingredients">Ingredients</string>
 </resources>

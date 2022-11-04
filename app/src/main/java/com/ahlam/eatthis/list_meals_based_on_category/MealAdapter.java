@@ -1,4 +1,4 @@
-package com.ahlam.eatthis;
+package com.ahlam.eatthis.list_meals_based_on_category;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ahlam.eatthis.R;
 import com.ahlam.eatthis.domain.MealByCategory;
 
 import java.util.ArrayList;
