@@ -2,6 +2,7 @@ package com.ahlam.eatthis.meal_recipty;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -22,6 +23,7 @@ public class MealDetailActivity extends AppCompatActivity {
 
     String recipymeal;
     Call<ReceiptAPiList> MealDetails;
+    private Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,8 +68,7 @@ public class MealDetailActivity extends AppCompatActivity {
                 ivMealIng5_name.setText(receiptMeals.getStrIngredient5());
                 tvReceiptInstructionsDetail.setText(receiptMeals.getStrInstructions());
 
-//                Picasso.with(context()).load(ivDetailPhoto)
-
+                Picasso.with(context).load(receiptMeals.getStrMealThumb()).into(ivDetailPhoto);
 
             }
 

@@ -78,6 +78,5 @@ public class RecipeCategoryListActivity extends AppCompatActivity implements Ada
         Intent intent = new Intent(this, MealDetailActivity.class);
         intent.putExtra("recipeID", selectReciptID);
         startActivity(intent);
-
     }
 }

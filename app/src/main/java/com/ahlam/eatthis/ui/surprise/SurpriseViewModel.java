@@ -4,16 +4,19 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.ahlam.eatthis.api.TheMealDbApi;
+import com.ahlam.eatthis.api.TheMealDbApiInterface;
+
 public class SurpriseViewModel extends ViewModel {
 
-    private final MutableLiveData<String> mText;
 
     public SurpriseViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is the surprise me fragment");
+        loadRandMeals();
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    private void loadRandMeals() {
+        TheMealDbApiInterface api = TheMealDbApi.buildInstance();
+
     }
+
 }

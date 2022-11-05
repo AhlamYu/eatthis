@@ -9,7 +9,7 @@
     tools:context=".ui.surprise.SurpriseFragment">
 
     <ImageView
-        android:id="@+id/random_meal"
+        android:id="@+id/ivRandom_img"
         android:layout_width="350dp"
         android:layout_height="350dp"
         android:layout_gravity="center"
@@ -23,19 +23,38 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/random_meal_name"
+        android:id="@+id/tvRandom_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
-        android:text="Placeholder"
+        android:text="@string/placeholder"
         android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/random_meal"
+        app:layout_constraintEnd_toEndOf="@+id/ivRandom_img"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.617" />
+
+    <TextView
+        android:id="@+id/tvRandom_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/placeholder"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/ivRandom_img"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.529" />
 
     <ImageView
         android:layout_width="55dp"
@@ -47,7 +66,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.859"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/random_meal_name"
+        app:layout_constraintTop_toBottomOf="@+id/tvRandom_name"
         android:onClick="getMore"/>
 
     <Button

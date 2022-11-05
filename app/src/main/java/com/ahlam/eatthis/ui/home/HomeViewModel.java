@@ -29,8 +29,6 @@ public class HomeViewModel extends ViewModel {
 
     }
 
-
-
     public LiveData<List<Category>> getCategories() {
         if (categories == null) {
             categories = new MutableLiveData<>();
@@ -53,10 +51,7 @@ public class HomeViewModel extends ViewModel {
 
             @Override
             public void onFailure(Call<CategoryApiList> call, Throwable throwable) {
-//                Toast.makeText(, "An error has occurred", Toast.LENGTH_LONG).show();
-//                categoryList.clear();
-//                categoryAdapter.notifyDataSetChanged();
-//                Toast.makeText(getActivity(), throwable.getMessage(), Toast.LENGTH_LONG).show();
+
             }
 
 

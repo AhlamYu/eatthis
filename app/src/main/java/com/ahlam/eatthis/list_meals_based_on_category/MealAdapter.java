@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.ahlam.eatthis.R;
 import com.ahlam.eatthis.domain.MealByCategory;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -19,13 +20,14 @@ public class MealAdapter extends BaseAdapter {
     private Context context;
     private ArrayList<MealByCategory> listMeal;
     private LayoutInflater inflater;
-    private String categoryName ;
+    private String entityCategory;
 
     public MealAdapter(Activity context , ArrayList<MealByCategory> listMeal, String categoryName){
         this.context = context;
         this.listMeal = listMeal;
-        this.categoryName = categoryName;
+        this.entityCategory = categoryName;
         inflater = LayoutInflater.from(context);
+//        entityCategory = categoryName;
     }
 
     static class ViewHolder {
@@ -58,7 +60,7 @@ public class MealAdapter extends BaseAdapter {
         if (convertView == null){
             convertView = inflater.inflate(R.layout.layout_for_each_meal,null);
             holder = new ViewHolder();
-            holder.ivMealPhoto = convertView.findViewById(R.id.ivMealPhoto);
+//            holder.ivMealPhoto = convertView.findViewById(R.id.ivMealPhoto);
             holder.tvMealName = convertView.findViewById(R.id.tvMealName);
             holder.tvMealCategory = convertView.findViewById(R.id.tvMealCategory);
 
@@ -68,10 +70,10 @@ public class MealAdapter extends BaseAdapter {
         }
 
         MealByCategory meal = listMeal.get(position);
-        //TODO add images here
-//        holder.ivMealPhoto.setImageBitmap(meal.getStrMealThumb());
+        ImageView ivMealPhoto = holder.ivMealPhoto = convertView.findViewById(R.id.ivMealPhoto);;
+        Picasso.with(context).load(meal.getStrMealThumb()).into(ivMealPhoto);
         holder.tvMealName.setText(meal.getStrMeal());
-//        holder.tvMealCategory.setText(meal.get);
+        holder.tvMealCategory.setText(entityCategory);
 
         return convertView;
     }
