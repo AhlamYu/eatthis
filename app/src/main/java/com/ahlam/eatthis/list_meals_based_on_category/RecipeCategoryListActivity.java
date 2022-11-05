@@ -44,7 +44,7 @@ public class RecipeCategoryListActivity extends AppCompatActivity implements Ada
         ListView listView = findViewById(R.id.recipe_list_category);
         listView.setAdapter(mealAdapter);
 
-
+        listView.setOnItemClickListener(this);
         loadRecipes();
     }
 

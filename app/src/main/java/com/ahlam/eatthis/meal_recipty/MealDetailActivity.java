@@ -1,30 +1,18 @@
 package com.ahlam.eatthis.meal_recipty;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.MutableLiveData;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.ahlam.eatthis.R;
 import com.ahlam.eatthis.api.TheMealDbApi;
 import com.ahlam.eatthis.api.TheMealDbApiInterface;
-import com.ahlam.eatthis.domain.Category;
-import com.ahlam.eatthis.domain.CategoryApiList;
-import com.ahlam.eatthis.domain.MealByCategory;
-import com.ahlam.eatthis.domain.MealByCategoryApiList;
 import com.ahlam.eatthis.domain.ReceiptAPiList;
 import com.ahlam.eatthis.domain.ReceiptMeal;
-import com.ahlam.eatthis.list_meals_based_on_category.MealAdapter;
-import com.ahlam.eatthis.list_meals_based_on_category.RecipeCategoryListActivity;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.squareup.picasso.Picasso;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -33,6 +21,7 @@ import retrofit2.Response;
 public class MealDetailActivity extends AppCompatActivity {
 
     String recipymeal;
+    Call<ReceiptAPiList> MealDetails;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +31,6 @@ public class MealDetailActivity extends AppCompatActivity {
         /// Recieve the data
         Intent intent = getIntent();
         recipymeal = intent.getStringExtra("recipeID");
-
 
         loadRecipe();
     }
@@ -55,6 +43,32 @@ public class MealDetailActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ReceiptAPiList> call, Response<ReceiptAPiList> response) {
                 ReceiptAPiList receiptAPiList = response.body();
+                ReceiptMeal receiptMeals = receiptAPiList.getMeals().get(0);
+
+                ImageView ivDetailPhoto = findViewById(R.id.ivDetailPhoto);
+                TextView tvTitle_name = findViewById(R.id.tvDetailMealName);
+                TextView ivMealCate_name = findViewById(R.id.ivMealCate_name);
+                TextView ivMealArea_name = findViewById(R.id.ivMealArea_name);
+                TextView ivMealIng1_name = findViewById(R.id.ivMealIng1_name);
+                TextView ivMealIng2_name = findViewById(R.id.ivMealIng2_name);
+                TextView ivMealIng3_name = findViewById(R.id.ivMealIng3_name);
+                TextView ivMealIng4_name = findViewById(R.id.ivMealIng4_name);
+                TextView ivMealIng5_name = findViewById(R.id.ivMealIng5_name);
+                TextView tvReceiptInstructionsDetail = findViewById(R.id.tvReceiptInstructionsDetail);
+
+                tvTitle_name.setText(receiptMeals.getStrMeal());
+                ivMealCate_name.setText(receiptMeals.getStrCategory());
+                ivMealArea_name.setText(receiptMeals.getStrArea());
+                ivMealIng1_name.setText(receiptMeals.getStrIngredient1());
+                ivMealIng2_name.setText(receiptMeals.getStrIngredient2());
+                ivMealIng3_name.setText(receiptMeals.getStrIngredient3());
+                ivMealIng4_name.setText(receiptMeals.getStrIngredient4());
+                ivMealIng5_name.setText(receiptMeals.getStrIngredient5());
+                tvReceiptInstructionsDetail.setText(receiptMeals.getStrInstructions());
+
+//                Picasso.with(context()).load(ivDetailPhoto)
+
+
             }
 
             @Override

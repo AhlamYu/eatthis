@@ -29,41 +29,36 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="100dp"
         android:layout_marginEnd="8dp"
+        android:text="Placeholder"
         android:textAlignment="center"
         android:textSize="20sp"
-        android:text="Placeholder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/random_meal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_corner"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@id/random_meal_name"
-        tools:layout_editor_absoluteX="15dp" />
-
     <ImageView
         android:layout_width="55dp"
         android:layout_height="55dp"
-        android:layout_marginBottom="23dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginBottom="35dp"
         android:src="@drawable/ic_baseline_arrow_circle_right_24"
         app:layout_constraintBottom_toTopOf="@+id/button"
-        tools:layout_editor_absoluteX="313dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/random_meal_name"
+        android:onClick="getMore"/>
 
     <Button
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="79dp"
         android:background="@drawable/rounded_corner"
         android:gravity="center"
-        android:text="@string/title_surprise"
         android:paddingRight="34dp"
+        android:text="@string/title_surprise"
         android:textColor="@color/off_white"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:layout_editor_absoluteX="30dp" />

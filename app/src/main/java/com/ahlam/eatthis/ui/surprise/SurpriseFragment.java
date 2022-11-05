@@ -34,4 +34,8 @@ public class SurpriseFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
+    public void getMore(View view) {
+
+    }
 }
